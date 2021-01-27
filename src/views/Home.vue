@@ -8,35 +8,35 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+// import { mapActions, mapState } from 'vuex'
 import ProductCard from '../components/ProductCard'
 export default {
   name: 'Home',
   components: {
     ProductCard
   },
-  // methods: {
-  // 	fetch () {
-  // 		this.$store.dispatch('fetchProd')
-  // 	}
-  // },
+  methods: {
+  	fetch () {
+  		this.$store.dispatch('fetchProd')
+  	}
+  },
   created () {
     // this.$store.dispatch('fetchProd')
-    // this.fetch()
-    this.getProducts()
+    this.fetch()
+    // this.getProducts()
   },
   computed: {
-    // products () {
-    // 	return this.$store.state.products
-    // }
+    products () {
+    	return this.$store.state.products
+    }
     // products () {
     //   return this.$store.state.products
     // }
-    ...mapState('products', ['products'])
-  },
-  methods: {
-    ...mapActions('products', ['getProducts'])
+    // ...mapState ('products', ['products'])
   }
+//   methods: {
+//     ...mapActions ('products', ['getProducts'])
+//   }
 }
 </script>
 

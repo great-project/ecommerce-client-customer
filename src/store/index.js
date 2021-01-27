@@ -81,7 +81,7 @@ export default new Vuex.Store({
       })
         .then(({ data }) => {
           context.commit('setProducts', data.products)
-          // console.log(data)
+          console.log(data)
         })
         .catch(error => {
           console.log(error.response.data)
